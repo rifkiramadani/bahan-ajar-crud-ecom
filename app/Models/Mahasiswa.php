@@ -14,4 +14,6 @@ class Mahasiswa extends Model
     {
         return $this->belongsTo(Fakultas::class);
     }
+
+    protected $fillable = ['name', 'npm', 'alamat', 'fakultas_id'];
 }

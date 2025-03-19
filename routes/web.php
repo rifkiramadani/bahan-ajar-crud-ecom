@@ -47,3 +47,7 @@ Route::get('/halamanketiga', function () {
 });
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index']);
+
+Route::get('/mahasiswa/create', [MahasiswaController::class, 'create']);
+
+Route::post('/mahasiswa', [MahasiswaController::class, 'store']);

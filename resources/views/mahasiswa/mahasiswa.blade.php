@@ -2,7 +2,12 @@
 
 @section('content')
 <center><h1 class="mb-5">TABLE MAHASISWA</h1></center>
-<a href="" class="btn btn-primary mb-2">+Tambah Data</a>
+@if (session()->has('success'))
+    <div class="alert alert-success">
+      {{session('success')}}
+    </div>
+@endif
+<a href="/mahasiswa/create" class="btn btn-primary mb-2">+Tambah Data</a>
 <table class="table table-dark table-striped">
     <thead>
       <tr>
