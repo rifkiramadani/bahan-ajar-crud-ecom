@@ -28,9 +28,11 @@
           <td>{{$mahasiswa->alamat}}</td>
           <td>{{$mahasiswa->fakultas->name}}</td>
           <td>
-            <a href="" class="btn btn-warning">Edit</a>
-            <form action="" class="d-inline">
-              <button type="submit" class="btn btn-danger">Hapus</button>
+            <a href="/mahasiswa/{{$mahasiswa->id}}/edit" class="btn btn-warning">Edit</a>
+            <form action="/mahasiswa/{{$mahasiswa->id}}" class="d-inline" method="post">
+              @csrf
+              @method('DELETE')
+              <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</button>
             </form>
           </td>
         </tr>
